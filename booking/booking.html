@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seat Booking</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+#seats-container{
+    border: 3px solid black;
+    display: inline-grid;
+    grid-template-columns:repeat(5,2fr);
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color:rgb(194, 189, 189);
+}
+.book {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    
+}
+#all{
+    
+    border: 5px solid black;
+    width: 500px;
+    position: relative;
+    left: 600px;
+    top: 50px;
+}
+#center{
+    position: relative;
+    background-color:pink;
+
+}
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="center">
+    <h1>Seat Booking</h1><br><br>
+<form id="form1">
+    <h3>Name :<input type="text" id="name"></h3><br><br>
+    <h3>Required Seats:<input type="number" id="requiredSeats" > <br><br>
+    </h3>
+</form>
+    
+    <div id="seats-container">
+        <div class="book seet1">1</div>
+                <div class="book seet2">2</div>
+                <div class="book seet3">3</div>
+                <div class="book seet4">4</div>
+                <div class="book seet5">5</div>
+                <div class="book seet6">6</div>
+                <div class="book seet7">7</div>
+                <div class="book seet8">8</div>
+                <div class="book seet9">9</div>
+                <div class="book seet1">10</div>
+
+                <div class="book seet1">11</div>
+                <div class="book seet2">12</div>
+                <div class="book seet3">13</div>
+                <div class="book seet4">14</div>
+                <div class="book seet5">15</div>
+                <div class="book seet6">16</div>
+                <div class="book seet7">17</div>
+                <div class="book seet8">18</div>
+                <div class="book seet7">19</div>
+                <div class="book seet8">20</div>
+    
+    </div><br><br><br>
+    <button id="confirmBtn">Confirm</button><br><br>
+    <button onclick="clearForm(),add()">Add</button><br>
+    <form id="form2">
+    <h3>Total Tickets: <input type="text" id="num" readonly></h3><br><br>
+    <h3>Selected Seat Numbers: <input type="text" id="para" readonly></h3><br><br>
+    
+    <h3 id="final"></h3>
+    
+    </div></div>
+</form>
+    <script>
+       function clearForm(){
+        form1.reset();
+        form2.reset()
+        document.getElementById('final').innerHTML = ''
+
+       }
+      
+       function all(){
+    let seatElements = document.querySelectorAll('.book');
+        let selectedSeats = [];
+
+        seatElements.forEach(seat => {
+            seat.addEventListener('click', () => {
+                let seatNumber = seat.innerHTML;//clicked seats num
+                if (selectedSeats.length < Number(document.getElementById('requiredSeats').value)) {
+                    if (!selectedSeats.includes(seatNumber)) {
+                        seat.style.backgroundColor = 'yellow';
+                        selectedSeats.push(seatNumber);
+                    } else {
+                        seat.style.backgroundColor = 'green';
+                      selectedSeats.splice(selectedSeats.indexOf(seatNumber), 1);//start,len
+                    }
+
+                    let totalTickets = selectedSeats.length;
+                    document.getElementById('num').value = totalTickets;
+                    document.getElementById('para').value = selectedSeats.join(', ');
+                }
+            });
+        });
+
+        document.getElementById('confirmBtn').addEventListener('click', () => {
+            let firstName = document.getElementById('name').value;
+            let requiredSeats = Number(document.getElementById('requiredSeats').value);
+            let totalTickets = selectedSeats.length;
+
+            if (requiredSeats === totalTickets) {
+                document.getElementById('final').innerHTML = "Hi " + firstName + ", you have selected " + requiredSeats + " tickets. Your seat numbers are " + selectedSeats.join(', ');
+
+            } else if (requiredSeats > totalTickets) {
+                document.getElementById('final').innerHTML = "Please select " + requiredSeats + " seats.";
+            }
+        });}
+        all()
+        function add(){
+        all()
+       }
+    </script>
+</body>
+</html>

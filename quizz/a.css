@@ -1,0 +1,33 @@
+
+#first{
+    color: green;
+}
+#second{
+    color: green;
+}
+#third{
+    color: green;
+
+}
+#fourth{
+    color: green;
+}
+#fifth{
+    color: green;
+}
+.A{
+    
+    border: 5px solid black;
+    width: 400px;
+    left: 600px;
+    text-align: center;
+   position: relative;
+    padding: 5px;
+    background-color: rgb(202, 161, 202);
+
+}
+#result{
+    color: red;
+    background-color: yellow;
+}
+
