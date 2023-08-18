@@ -1,0 +1,50 @@
+body{
+  background: url('../media/img/uchiha_clan_1.jpg') ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+  main{
+    padding: 1rem;
+  }
+
+  .card{
+    background: transparent;
+    color: aliceblue;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .card-header {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .item img {
+    width: 100px;
+    height: auto;
+  }
+
+  .item-name {
+    font-weight: bold;
+  }
+
+  .item-price {
+    font: 25px arial;
+    font-weight: 600;
+  }
+  #value,#value1,#value2{
+    width: 48%;
+    text-align: center;
+  }
+ 
+

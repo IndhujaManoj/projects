@@ -7,16 +7,9 @@ const radios4 = document.querySelectorAll('input[name="bird"]')
 const radios5 = document.querySelectorAll('input[name="cons"]')
 const result=document.getElementById('result')
 
-
-
-//console.log(radios)
-
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     let q1 = "";
-  /*  let q3 = "";
-    let q4 = ""
-    let q5 = ""*/
     let score = 0
     radios.forEach((radio) => {
         if (radio.checked) {
@@ -26,6 +19,8 @@ form.addEventListener('submit', function (e) {
     if (q1 == "kadhakali") {
         score ++
         document.querySelector('input[name="dance"]:checked').nextElementSibling.style.color = 'green'
+
+      
     } else {
         document.querySelector('input[name="dance"]:checked').nextElementSibling.style.color = 'red'
         document.getElementById('first').innerHTML = "Answer:kadhakali"

@@ -1,0 +1,8 @@
+body{
+    background: url('../media/img/bg-body.gif') ;
+    background-size: cover;
+}
+.card-middle-body{
+    font: 22px arial;
+    font-weight: 800;
+}

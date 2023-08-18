@@ -1,0 +1,46 @@
+body{
+    /*background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.8813726174063375) 50%, rgba(252,176,69,1) 100%); */
+    background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+label{
+    margin-bottom: 10px;
+    color: white;
+
+}
+
+input[type="text"],
+input[type="password"]{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 250px;
+
+}
+
+input[type="submit"]{
+    background-color: blue;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: navy;
+}
+h1{
+   color:white;
+   padding-bottom: 50px; 
+    
+}

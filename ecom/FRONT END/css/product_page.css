@@ -1,0 +1,13 @@
+body{
+    background: url('../media/img/bg-body.gif') ;
+    background-size: cover;
+}
+.divider-column {
+    margin-top: 20px;
+    border: none;
+}
+
+.card-middle-body{
+    font: 22px arial;
+    font-weight: 800;
+}

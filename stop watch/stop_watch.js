@@ -48,8 +48,13 @@ btnReset.addEventListener('click',()=>{
 function updateDisplay(){
     //formated Display
     phrs=hrs<10?'0'+hrs:hrs;
+   // console.log(phrs,"hu")
     pmin=min<10?'0'+min:min;
+    //console.log(pmin,"m")
+
     psec=sec<10?'0'+sec:sec;
+   // console.log(psec,"s")
+
     pms=ms<10?'0'+ms:ms;//25
 
     //convert into string
@@ -59,13 +64,13 @@ function updateDisplay(){
     psec=psec.toString()
     pms=pms.toString()//'25' pms[0]=2 pms[1]=5
 
-    document.querySelectorAll('.hrs')[0].innerText=phrs[0]
-    document.querySelectorAll('.hrs')[1].innerText=phrs[1]
-    document.querySelectorAll('.min')[0].innerText=pmin[0]
-    document.querySelectorAll('.min')[1].innerText=pmin[1]
-    document.querySelectorAll('.sec')[0].innerText=psec[0]
-    document.querySelectorAll('.sec')[1].innerText=psec[1]
-    document.querySelectorAll('.ms')[0].innerText=pms[0]
-    document.querySelectorAll('.ms')[1].innerText=pms[1]
+    document.querySelectorAll('.hrs')[0].innerText=phrs[0];
+    document.querySelectorAll('.hrs')[1].innerText=phrs[1];
+    document.querySelectorAll('.min')[0].innerText=pmin[0];
+    document.querySelectorAll('.min')[1].innerText=pmin[1];
+    document.querySelectorAll('.sec')[0].innerText=psec[0];
+    document.querySelectorAll('.sec')[1].innerText=psec[1];
+    document.querySelectorAll('.ms')[0].innerText=pms[0];
+    document.querySelectorAll('.ms')[1].innerText=pms[1];
 
 }

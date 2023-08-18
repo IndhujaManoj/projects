@@ -1,0 +1,117 @@
+/* BODY STYLING */
+
+/* --------------------- HEADER STYLING --------------------- */
+
+/* ------HEADER TOP------ */
+.logo{
+    margin: 5px 0px 5px 0px;
+    height: 50px;
+    width: 50px;
+}
+.logo_word{
+    margin: 5px 0px 5px 0px;
+    height: 50px;
+    width: 120px;
+}
+.header_top{
+    background-image: linear-gradient(#ff6600,#ff9900,#ff8b3d,#ff6600);
+}
+
+.search_btn,.search_box{
+    height: 45px;
+}
+
+.login_btn span{
+    border: 5px;
+    color: #fff!important;
+    font-size: large;
+    font-weight: 600;
+}
+/* ------HEADER BOTTOM------ */
+.header_bottom{
+    margin-right:0px;
+    background-image: linear-gradient(#000431,#021ca4);
+    color: #fc9403;
+    font-size: large;
+    font-weight: 700;
+    padding: 5px;
+    padding-bottom: 0px;
+}
+.header-container {
+    margin-right:0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.nav-item{
+    list-style-type: none;
+}
+.header-column {
+    flex-basis: auto;
+}
+.dropdown-menu{
+    list-style-type: none;
+}
+
+/* MAIN */
+.main_cover{
+    width: 100%;
+    height: 100%;
+}
+/* Footer Styling */
+footer{
+    margin-right:0px;
+    padding: 20px;
+    background-image: linear-gradient(#000431,#021ca4,#01065a);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex-basis: 25%;
+}
+
+.footer-column h4 {
+    color: #ff6600 ;
+    font-weight: bold;
+}
+
+.footer-links li a{
+    color: #fff;
+    font-weight: 500;
+}
+.divider {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* COPYRIGHT */
+.copyright{
+    color: #fff;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+/* Additional styling for responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-column {
+        flex-basis: 100%;
+    }
+    .header-column{
+        flex-basis:33% ;
+    }
+}
+.footer-links{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
