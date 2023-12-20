@@ -15,7 +15,10 @@
         <button class="btn" data-filter="cake">Cake</button>
         <button class="btn"  data-filter="icecream">Ice cream</button>
        </div>
-       <input type="text" id="search" placeholder="search food">
+       <form autocomplete="off" action="/search">
+        <input type="text" id="search" placeholder="search food" autocomplete="off" name="search">
+
+       </form>
     </div>
     <div class="container">
         <div class="box" data-item="cake"><img src="cake1.jpeg"></div>
